@@ -106,7 +106,7 @@ data = {
 			source : "http://en.wikipedia.org/wiki/Milky_Way",
 			longDesc : "The Milky Way is our own galaxy, in which reside some 200 to 400 billion stars, including our sun.  It is one of billions of galaxies in the observable universe.",
 			imageUrl : "images/Milky_Way_Galaxy.jpg",
-			include : [ "a1", "a2", "b2" ]
+			include : [ "a1", "a2", "b1", "b2" ]
 		},
 		{
 			description : "the Orion Nebula",
