@@ -1,0 +1,25 @@
+visible universe		8.8e+26 m
+Local Supercluster		1e+24 m
+Local Group				3.8e+22 m
+Milky Way				9.5e+20 m
+Great Orion Nebula		2.27e+17 m
+Oort Cloud				1.5e+16 m
+solar system			4.5e+12 m
+VY Canis Majoris		2.7e+12 m
+Earth's orbit			3e+11 m
+Sun						1.391e+9 m 
+Jupiter					1.43e+8 m
+Earth					1.2756e+7 m
+Texas					1.2e+6 m
+Manhattan 				2.3e+4 m
+Eiffel Tower			3.24e+2 m
+human body				1.8e+0 m
+walnut					5e-2 m
+dust mite				4e-4 m
+human red blood cell	7e-6 m
+mimivirus				5e-7 m 
+Parvoviridae virus 		2e-8 m
+hydrogen atom 			5.29e-9 m
+proton					1e-15 m				http://hypertextbook.com/facts/1999/YelenaMeskina.shtml
+electron				1e-22 m				http://www.iop.org/EJ/abstract/1402-4896/1988/T22/016/
+Planck length			1.616e-35 m
