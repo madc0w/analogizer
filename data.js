@@ -79,7 +79,7 @@ data = {
 			source : "http://en.wikipedia.org/wiki/Observable_universe",
 			longDesc : "The age of the Universe is about 13.7 billion years, but due to the expansion of space we are now observing objects that are now considerably farther away than a static 13.7 billion light-years distance.  The visible universe is thus a sphere with a measure of about 28 billion parsecs (about 93 billion light-years).",
 			imageUrl : "images/universe.gif",
-			include : [ "a1", "a2" ]
+			include : [ "a1", "a2", "b1" ]
 		},
 		{
 			description : "the Local Supercluster",
