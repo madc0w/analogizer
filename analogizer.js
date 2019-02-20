@@ -1,16 +1,16 @@
-var a1 = document.getElementById("a1");
-var b1 = document.getElementById("b1");
-var a2 = document.getElementById("a2");
-var b2 = document.getElementById("b2");
-var multiplier = document.getElementById("multiplier");
-var detailsTitle = document.getElementById("details_title");
-var detailsMeasure = document.getElementById("details_measure");
-var detailsLongDesc = document.getElementById("details_longDesc");
-var detailsSource = document.getElementById("details_source");
-var detailsImage = document.getElementById("details_image");
+const a1 = document.getElementById("a1");
+const b1 = document.getElementById("b1");
+const a2 = document.getElementById("a2");
+const b2 = document.getElementById("b2");
+const multiplier = document.getElementById("multiplier");
+const detailsTitle = document.getElementById("details_title");
+const detailsMeasure = document.getElementById("details_measure");
+const detailsLongDesc = document.getElementById("details_longDesc");
+const detailsSource = document.getElementById("details_source");
+const detailsImage = document.getElementById("details_image");
 var selectedDomain;
 
-var numFromat = new NumberFormat();
+const numFromat = new NumberFormat();
 numFromat.setInputDecimal(".");
 numFromat.setPlaces("-1", false);
 numFromat.setCurrencyValue("$");
@@ -33,7 +33,7 @@ function onLoad() {
 	if (url.indexOf("?") > 0) {
 		urlDataStr = url.split("?")[1].split("&");
 		var urlData = {};
-		for ( var i in urlDataStr) {
+		for (var i in urlDataStr) {
 			var keyVal = urlDataStr[i].split("=");
 			urlData[keyVal[0]] = keyVal[1];
 		}
@@ -46,7 +46,7 @@ function onLoad() {
 	}
 
 	var opt;
-	for ( var i in data[selectedDomain]) {
+	for (var i in data[selectedDomain]) {
 		var includes = data[selectedDomain][i].include;
 		if (includes.includes("a1")) {
 			opt = new Option(data[selectedDomain][i].description, i);
@@ -75,7 +75,7 @@ function onLoad() {
 	compute();
 
 	show("a1");
-	//	a2a_linkurl = window.location.href;
+//	a2a_linkurl = window.location.href;
 }
 
 function compute() {
@@ -86,8 +86,7 @@ function compute() {
 	var result = a2Selection.measure * (b1Selection.measure / a1Selection.measure);
 
 	var i = 0;
-	while (b2Data[i++].measure > result && i < b2Data.length)
-		;
+	while (b2Data[i++].measure > result && i < b2Data.length);
 
 	if (i > 1) {
 		// find the closest match, larger or smaller
@@ -107,10 +106,10 @@ function compute() {
 		linkname : getFactText(),
 	});
 
-	//	a2a_linkname = getFactText();
-	//	a2a_linkurl = window.location.href;
-	//	var fbDesc = document.getElementById("facebook-description");
-	//	fbDesc.setAttribute("content", "kakaka");
+//	a2a_linkname = getFactText();
+//	a2a_linkurl = window.location.href;
+//	var fbDesc = document.getElementById("facebook-description");
+//	fbDesc.setAttribute("content", "kakaka");
 }
 
 function getFactText() {
@@ -246,7 +245,7 @@ function selectDomain(el) {
 
 function getB2Data() {
 	var b2Data = [];
-	for ( var i in data[selectedDomain]) {
+	for (var i in data[selectedDomain]) {
 		if (data[selectedDomain][i].include.includes("b2")) {
 			b2Data.push(data[selectedDomain][i]);
 		}
