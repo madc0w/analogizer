@@ -47,19 +47,19 @@ function onLoad() {
 
 	var opt;
 	for (var i in data[selectedDomain]) {
-		var includes = data[selectedDomain][i].include;
-		if (includes.includes("a1")) {
-			opt = new Option(data[selectedDomain][i].description, i);
-			a1.add(opt, isIE ? 0 : null);
-		}
-		if (includes.includes("b1")) {
-			opt = new Option(data[selectedDomain][i].description, i);
-			b1.add(opt, isIE ? 0 : null);
-		}
-		if (includes.includes("a2")) {
-			opt = new Option(data[selectedDomain][i].description, i);
-			a2.add(opt, isIE ? 0 : null);
-		}
+		//		const includes = data[selectedDomain][i].include;
+		//		if (includes.includes("a1")) {
+		opt = new Option(data[selectedDomain][i].description, i);
+		a1.add(opt, isIE ? 0 : null);
+		//		}
+		//		if (includes.includes("b1")) {
+		opt = new Option(data[selectedDomain][i].description, i);
+		b1.add(opt, isIE ? 0 : null);
+		//		}
+		//		if (includes.includes("a2")) {
+		opt = new Option(data[selectedDomain][i].description, i);
+		a2.add(opt, isIE ? 0 : null);
+	//		}
 	}
 	document.getElementById(selectedDomain).className = "selected";
 	document.getElementById("domain-descriptor").innerHTML = descriptors[selectedDomain];
@@ -79,7 +79,7 @@ function onLoad() {
 }
 
 function compute() {
-	var b2Data = getB2Data();
+	const b2Data = getB2Data();
 	a1Selection = data[selectedDomain][a1.options[a1.selectedIndex].value];
 	b1Selection = data[selectedDomain][b1.options[b1.selectedIndex].value];
 	a2Selection = data[selectedDomain][a2.options[a2.selectedIndex].value];
@@ -113,8 +113,8 @@ function compute() {
 }
 
 function getFactText() {
-	var descriptor = descriptors[selectedDomain] ? (descriptors[selectedDomain] + " ") : "";
-	var text = "If " + a1Selection.description + " were " + descriptor + b1Selection.description + ", then " + a2Selection.description + " would be "
+	const descriptor = descriptors[selectedDomain] ? (descriptors[selectedDomain] + " ") : "";
+	const text = "If " + a1Selection.description + " were " + descriptor + b1Selection.description + ", then " + a2Selection.description + " would be "
 		+ multiplier.innerHTML + " times " + descriptor + b2.innerHTML + ".";
 	return text;
 }
@@ -124,7 +124,7 @@ function facebookA2aClick() {
 }
 
 function copyFact() {
-	var textArea = document.createElement("textarea");
+	const textArea = document.createElement("textarea");
 
 	// *** This styling is an extra step which is likely not required. ***
 	//
@@ -169,7 +169,7 @@ function copyFact() {
 
 	document.body.removeChild(textArea);
 
-	var copyConf = document.getElementById("copy-confirmation");
+	const copyConf = document.getElementById("copy-confirmation");
 	copyConf.style.visibility = "visible";
 	setTimeout(function() {
 		copyConf.style.visibility = "hidden";
@@ -186,32 +186,32 @@ function show(id) {
 		_data = getB2Data();
 		i = b2.index;
 	}
-	var selection = _data[i];
+	const selection = _data[i];
 	updateDetails(selection);
 }
 
 function update(e) {
 	compute();
 	// evt evaluates to window.event or inexplicit e object, depending on which one is defined
-	var evt = window.event || e;
+	const evt = window.event || e;
 	if (!evt.target) {
 		// if event obj doesn't support e.target, presume it does e.srcElement
 		evt.target = evt.srcElement; // extend obj with custom e.target prop
 	}
-	var selection = data[selectedDomain][evt.target.options[evt.target.selectedIndex].value];
+	const selection = data[selectedDomain][evt.target.options[evt.target.selectedIndex].value];
 	updateDetails(selection);
 	updateUrl();
 }
 
 function updateUrl(isDefaults) {
-	var url = document.URL;
+	const url = document.URL;
 	if (url.indexOf("?") > 0) {
 		url = url.split("?")[0];
 	}
 
-	var a1Index = a1.selectedIndex;
-	var a2Index = a2.selectedIndex;
-	var b1Index = b1.selectedIndex;
+	const a1Index = a1.selectedIndex;
+	const a2Index = a2.selectedIndex;
+	const b1Index = b1.selectedIndex;
 	if (isDefaults) {
 		a1Index = defaults[selectedDomain].a1;
 		a2Index = defaults[selectedDomain].a2;
@@ -246,9 +246,9 @@ function selectDomain(el) {
 function getB2Data() {
 	var b2Data = [];
 	for (var i in data[selectedDomain]) {
-		if (data[selectedDomain][i].include.includes("b2")) {
-			b2Data.push(data[selectedDomain][i]);
-		}
+		//		if (data[selectedDomain][i].include.includes("b2")) {
+		b2Data.push(data[selectedDomain][i]);
+	//		}
 	}
 	return b2Data;
 }
