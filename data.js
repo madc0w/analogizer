@@ -1,15 +1,15 @@
 defaults = {
-	size : {
+	"domain-size" : {
 		a1 : 12,
 		b1 : 22,
 		a2 : 4,
 	},
-	distance : {
+	"domain-distance" : {
 		a1 : 4,
 		b1 : 2,
 		a2 : 9,
 	},
-	time : {
+	"domain-time" : {
 		a1 : 1,
 		b1 : 12,
 		a2 : 8,
@@ -17,7 +17,7 @@ defaults = {
 };
 
 conversions = {
-	size : {
+	"domain-size" : {
 		"billion light-years" : 9460730472580800.0e+9,
 		"million light-years" : 9460730472580800.0e+6,
 		"light-years" : 9460730472580800.0,
@@ -30,7 +30,7 @@ conversions = {
 		"angstroms" : 1e-10
 	},
 
-	distance : {
+	"domain-distance" : {
 		"billion light-years" : 9460730472580800.0e+9,
 		"million light-years" : 9460730472580800.0e+6,
 		"light-years" : 9460730472580800.0,
@@ -42,7 +42,7 @@ conversions = {
 		"angstroms" : 1e-10
 	},
 
-	time : {
+	"domain-time" : {
 		"billion years" : 3.1536e+16,
 		"million years" : 3.1536e+13,
 		"thousand years" : 3.1536e+10,
@@ -56,14 +56,14 @@ conversions = {
 };
 
 descriptors = {
-	size : "the size of",
-	distance : null,
-	time : null,
+	"domain-size" : "the size of",
+	"domain-distance" : null,
+	"domain-time" : null,
 };
 
 // data must occur in descending order of measure
 data = {
-	size : [
+	"domain-size" : [
 		{
 			description : "Donald Trump's ego",
 			measure : 1e+30,
@@ -366,7 +366,7 @@ data = {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
 
-	distance : [
+	"domain-distance" : [
 		{
 			description : "the distance to edge of Observable Universe",
 			measure : 4.3e+26,
@@ -559,7 +559,7 @@ data = {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
 
-	time : [
+	"domain-time" : [
 		{
 			description : "age of the Universe",
 			measure : 4.320432e+17,
