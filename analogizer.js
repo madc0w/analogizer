@@ -204,7 +204,7 @@ function update(e) {
 }
 
 function updateUrl(isDefaults) {
-	const url = document.URL;
+	var url = document.URL;
 	if (url.indexOf("?") > 0) {
 		url = url.split("?")[0];
 	}
