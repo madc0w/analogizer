@@ -1,23 +1,36 @@
 defaults = {
-	"domain-size" : {
-		a1 : 4,
-		a2 : 6,
-		b1 : 1
+	size : {
+		a1 : 12,
+		b1 : 22,
+		a2 : 4,
 	},
-	"domain-distance" : {
+	distance : {
 		a1 : 4,
+		b1 : 2,
 		a2 : 9,
-		b1 : 2
 	},
-	"domain-time" : {
+	time : {
 		a1 : 1,
+		b1 : 12,
 		a2 : 8,
-		b1 : 1
 	}
 };
 
 conversions = {
-	"domain-size" : {
+	size : {
+		"billion light-years" : 9460730472580800.0e+9,
+		"million light-years" : 9460730472580800.0e+6,
+		"light-years" : 9460730472580800.0,
+		"kilometers" : 1e+3,
+		"meters" : 1,
+		"centimeters" : 1e-2,
+		"millimeters" : 1e-3,
+		"microns" : 1e-6,
+		"nanometers" : 1e-9,
+		"angstroms" : 1e-10
+	},
+
+	distance : {
 		"billion light-years" : 9460730472580800.0e+9,
 		"million light-years" : 9460730472580800.0e+6,
 		"light-years" : 9460730472580800.0,
@@ -29,19 +42,7 @@ conversions = {
 		"angstroms" : 1e-10
 	},
 
-	"domain-distance" : {
-		"billion light-years" : 9460730472580800.0e+9,
-		"million light-years" : 9460730472580800.0e+6,
-		"light-years" : 9460730472580800.0,
-		"kilometers" : 1e+3,
-		"meters" : 1,
-		"centimeters" : 1e-2,
-		"microns" : 1e-6,
-		"nanometers" : 1e-9,
-		"angstroms" : 1e-10
-	},
-
-	"domain-time" : {
+	time : {
 		"billion years" : 3.1536e+16,
 		"million years" : 3.1536e+13,
 		"thousand years" : 3.1536e+10,
@@ -55,14 +56,14 @@ conversions = {
 };
 
 descriptors = {
-	"domain-size" : "the size of",
-	"domain-distance" : null,
-	"domain-time" : null,
+	size : "the size of",
+	distance : null,
+	time : null,
 };
 
 // data must occur in descending order of measure
 data = {
-	"domain-size" : [
+	size : [
 		{
 			description : "Donald Trump's ego",
 			measure : 1e+30,
@@ -263,6 +264,15 @@ data = {
 			include : [ "a1", "a2", "b1", "b2" ]
 		},
 		{
+			description : "a grain of sand",
+			measure : 1e-4,
+			alternateUnit : "millimeters",
+			source : "https://en.wikipedia.org/wiki/Sand",
+			longDesc : "The most common constituent of sand in inland continental settings and non-tropical coastal settings is silica (silicon dioxide, or SiO<sub>2</sub>), usually in the form of quartz. The second most common type of sand is calcium carbonate, for example, aragonite, which has mostly been created, over the past half billion years, by various forms of life, like coral and shellfish. ",
+			imageUrl : "images/Sand_from_Gobi_Desert.jpg",
+			include : [ "b1", "b2" ]
+		},
+		{
 			description : "the width of a human hair",
 			measure : 1e-4,
 			alternateUnit : "microns",
@@ -356,7 +366,7 @@ data = {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
 
-	"domain-distance" : [
+	distance : [
 		{
 			description : "the distance to edge of Observable Universe",
 			measure : 4.3e+26,
@@ -549,9 +559,9 @@ data = {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
 
-	"domain-time" : [
+	time : [
 		{
-			description : "the age of the Universe",
+			description : "age of the Universe",
 			measure : 4.320432e+17,
 			alternateUnit : "billion years",
 			source : "http://en.wikipedia.org/wiki/Observable_universe",
@@ -560,7 +570,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the age of Earth",
+			description : "age of the Earth",
 			measure : 1.4317344e+17,
 			alternateUnit : "billion years",
 			source : "http://en.wikipedia.org/wiki/Earth",
@@ -569,7 +579,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the time since life appeared on Earth",
+			description : "since life appeared on Earth",
 			measure : 1.3497408e+17,
 			alternateUnit : "billion years",
 			source : "https://en.wikipedia.org/wiki/Earliest_known_life_forms",
@@ -578,7 +588,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the time since multi-cellular life appeared on land",
+			description : "since multi-cellular life appeared on land",
 			measure : 1.3970448e+16,
 			alternateUnit : "million years",
 			source : "https://en.wikipedia.org/wiki/Silurian",
@@ -587,7 +597,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the time since the dinosaurs first appeared",
+			description : "since the dinosaurs first appeared",
 			measure : 8.577792e+15,
 			alternateUnit : "million years",
 			source : "https://en.wikipedia.org/wiki/Dinosaur#Origins_and_early_evolution",
@@ -596,7 +606,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the time since dinosaur extinction",
+			description : "since dinosaur extinction",
 			measure : 2.04984e+15,
 			alternateUnit : "million years",
 			source : "https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event",
@@ -605,7 +615,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the time since our genus Homo first appeared",
+			description : "since our genus Homo first appeared",
 			measure : 8.83008e+13,
 			alternateUnit : "million years",
 			source : "https://en.wikipedia.org/wiki/Human_evolution#Evolution_of_genus_Homo",
@@ -614,7 +624,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the time since our species Homo sapiens first appeared",
+			description : "since modern humans first appeared",
 			measure : 8.83008e+13,
 			alternateUnit : "thousand years",
 			source : "https://en.wikipedia.org/wiki/Homo_sapiens",
@@ -623,7 +633,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the history of human civilization",
+			description : "history of human civilization",
 			measure : 4.41504e+11,
 			alternateUnit : "thousand years",
 			source : "https://en.wikipedia.org/wiki/Cradle_of_civilization#Rise_of_civilization",
@@ -632,7 +642,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the length of recorded history",
+			description : "length of recorded history",
 			measure : 1.8922e+11,
 			alternateUnit : "thousand years",
 			source : "https://en.wikipedia.org/wiki/Recorded_history",
@@ -641,7 +651,7 @@ data = {
 			include : [ "a1", "a2" ]
 		},
 		{
-			description : "the time since Industrial Revolution",
+			description : "time since Industrial Revolution",
 			measure : 7.884e+9,
 			alternateUnit : "years",
 			source : "https://en.wikipedia.org/wiki/Industrial_Revolution",
@@ -698,14 +708,14 @@ data = {
 			alternateUnit : "seconds",
 			source : "https://en.wikipedia.org/wiki/Second",
 			longDesc : null,
-			imageUrl : null,
+			imageUrl : "images/one second.png",
 			include : [ "b1", "b2" ]
 		}, {
 			description : "one millisecond",
 			measure : 0.001,
 			alternateUnit : "milliseconds",
 			source : "https://en.wikipedia.org/wiki/Millisecond",
-			longDesc : "1 / 1000 of a second",
+			longDesc : "1/1000 of a second",
 			imageUrl : null,
 			include : [ "b1", "b2" ]
 		}, ],
