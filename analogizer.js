@@ -245,7 +245,7 @@ function selectDomain(el) {
 	if (selectedDomain != el.id) {
 		selectedDomain = el.id;
 		location = updateUrl(true);
-	//		location.reload();
+		location.reload();
 	}
 }
 
