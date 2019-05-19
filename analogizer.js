@@ -239,7 +239,7 @@ function formatNum(num, precision) {
 function selectDomain(el) {
 	if (selectedDomain != el.id) {
 		selectedDomain = el.id;
-		window.location.href = updateUrl(true);
+		open(updateUrl(true), "_self");
 	}
 }
 
