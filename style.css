@@ -208,3 +208,7 @@ div {
 #random-fact img {
 	height: 44px;
 }
+
+a {
+	cursor: pointer;
+}
