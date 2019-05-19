@@ -241,6 +241,13 @@ function formatNum(num, precision) {
 	return numFromat.toFormatted();
 }
 
+function selectDomain(el) {
+	if (selectedDomain != el.id) {
+		selectedDomain = el.id;
+		window.location.href = updateUrl(true);
+	}
+}
+
 function getB2Data() {
 	var b2Data = [];
 	for (var i in data[selectedDomain]) {
