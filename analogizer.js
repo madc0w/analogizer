@@ -101,10 +101,10 @@ function compute() {
 	b2.index = i - 1;
 	multiplier.innerHTML = formatNum(result / b2Data[i - 1].measure, 2);
 
-	a2a.init("Analogizer", {
-		target : ".share-this",
-		linkname : getFactText(),
-	});
+	//	a2a.init("Analogizer", {
+	//		target : ".share-this",
+	//		linkname : getFactText(),
+	//	});
 
 //	a2a_linkname = getFactText();
 //	a2a_linkurl = window.location.href;
@@ -119,9 +119,9 @@ function getFactText() {
 	return text;
 }
 
-function facebookA2aClick() {
-	alert("To share this fact to Facebook, please use the 'Copy fact to clipboard' button under it, and then paste it to your post.");
-}
+//function facebookA2aClick() {
+//	alert("To share this fact to Facebook, please use the 'Copy fact to clipboard' button under it, and then paste it to your post.");
+//}
 
 function copyFact() {
 	const textArea = document.createElement("textarea");
@@ -209,9 +209,9 @@ function updateUrl(isDefaults) {
 		url = url.split("?")[0];
 	}
 
-	const a1Index = a1.selectedIndex;
-	const a2Index = a2.selectedIndex;
-	const b1Index = b1.selectedIndex;
+	var a1Index = a1.selectedIndex;
+	var a2Index = a2.selectedIndex;
+	var b1Index = b1.selectedIndex;
 	if (isDefaults) {
 		a1Index = defaults[selectedDomain].a1;
 		a2Index = defaults[selectedDomain].a2;
