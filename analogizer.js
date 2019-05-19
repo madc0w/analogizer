@@ -23,6 +23,11 @@ numFromat.setSeparators(true, ",", ",");
 var isIE = window.ActiveXObject ? true : false;
 
 function onLoad() {
+	for (var domain of Object.keys(data)) {
+		selectedDomain = domain;
+		document.getElementById(domain).href = updateUrl(true); //
+	}
+
 	//	defaults
 	selectedDomain = "domain-size";
 	var a1Index = defaults[selectedDomain].a1;
@@ -219,7 +224,9 @@ function updateUrl(isDefaults) {
 	}
 
 	url += "?a1=" + a1Index + "&b1=" + b1Index + "&a2=" + a2Index + "&domain=" + selectedDomain;
-	window.history.pushState(null, null, url);
+	if (!isDefaults) {
+		window.history.pushState(null, null, url);
+	}
 	return url;
 }
 
@@ -236,12 +243,12 @@ function formatNum(num, precision) {
 	return numFromat.toFormatted();
 }
 
-function selectDomain(el) {
-	if (selectedDomain != el.id) {
-		selectedDomain = el.id;
-		open(updateUrl(true), "_self");
-	}
-}
+//function selectDomain(el) {
+//	if (selectedDomain != el.id) {
+//		selectedDomain = el.id;
+//		window.location.href = updateUrl(true);
+//	}
+//}
 
 function getB2Data() {
 	var b2Data = [];
