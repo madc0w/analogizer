@@ -23,10 +23,10 @@ numFromat.setSeparators(true, ",", ",");
 var isIE = window.ActiveXObject ? true : false;
 
 function onLoad() {
-	for (var domain of Object.keys(data)) {
-		selectedDomain = domain;
-		document.getElementById(domain).href = updateUrl(true); //
-	}
+	//	for (var domain of Object.keys(data)) {
+	//		selectedDomain = domain;
+	//		document.getElementById(domain).href = updateUrl(true); //
+	//	}
 
 	//	defaults
 	selectedDomain = "domain-size";
@@ -224,9 +224,7 @@ function updateUrl(isDefaults) {
 	}
 
 	url += "?a1=" + a1Index + "&b1=" + b1Index + "&a2=" + a2Index + "&domain=" + selectedDomain;
-	if (!isDefaults) {
-		window.history.pushState(null, null, url);
-	}
+	window.history.pushState(null, null, url);
 	return url;
 }
 
@@ -242,13 +240,6 @@ function formatNum(num, precision) {
 	numFromat.setNumber(num.toPrecision(precision));
 	return numFromat.toFormatted();
 }
-
-//function selectDomain(el) {
-//	if (selectedDomain != el.id) {
-//		selectedDomain = el.id;
-//		window.location.href = updateUrl(true);
-//	}
-//}
 
 function getB2Data() {
 	var b2Data = [];
