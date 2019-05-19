@@ -244,7 +244,8 @@ function formatNum(num, precision) {
 function selectDomain(el) {
 	if (selectedDomain != el.id) {
 		selectedDomain = el.id;
-		window.location.href = updateUrl(true);
+		location = updateUrl(true);
+	//		location.reload();
 	}
 }
 
