@@ -57,6 +57,12 @@ body {
 	border-style: solid;
 }
 
+#domains a:hover {
+	background-color: yellow;
+	color: black;
+}
+
+
 #domains a.selected {
 /* 	color: black; */
 /* 	border-color: black; */
@@ -151,6 +157,10 @@ div {
 	cursor: pointer;
 }
 
+#copy-fact:hover {
+	border-color: yellow;
+}
+
 #copy-confirmation {
 	visibility: hidden;
 	font-size: 22px;
@@ -162,15 +172,23 @@ div {
 	text-decoration: underline;
 }
 
+.show-link:hover {
+	color: yellow;
+}
+
 .show-link img {
 	height: 38px;
 	background-color: #f0f0ff;
 	border-radius: 38px;
 	vertical-align: middle;
-	border-width: 1px;
+	border-width: 4px;
 	border-style: solid;
 	border-color: blue;
 	margin-left: 10px;
+}
+
+.show-link img:hover {
+	border-color: yellow;
 }
 
 #answer a {
@@ -202,12 +220,20 @@ div {
 }
 
 #random-fact {
-	float: left;
-	font-size: 0.6em;
+	/* float: left; */
+	position: absolute;
 }
 
 #random-fact img {
 	height: 44px;
+	border-width: 8px;
+	border-style: solid;
+	border-radius: 40px;
+	border-color: transparent;
+}
+
+#random-fact img:hover {
+	background-color: blue;
 }
 
 a {
