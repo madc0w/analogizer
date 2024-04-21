@@ -188,13 +188,14 @@ div {
 	font-size: 0.7em;
 }
 
+/* 
 #addtoany {
 	float: right;
 	position: relative;
 	top: -20px;
 	left: 20px;
 	height: 0px;
-}
+} */
 
 .top-level {
 	box-shadow: 12px 12px 12px #666;
